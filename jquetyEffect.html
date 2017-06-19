@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>效果</title>
+    <script src="jquery-1.11.2.js"></script>
+    <script>
+        $(function () {
+            $("#hide").click(function () {
+                $(".square").hide();
+            });
+            $("#show").click(function () {
+                $(".square").show();
+            });
+            $("#toggle").click(function () {
+                $(".square").toggle(100);
+            });
+            $("#fadeIn").click(function () {
+                $(".square").fadeIn();
+            });
+            $("#fadeOut").click(function () {
+                $(".square").fadeOut();
+            });
+            $("#fadeTo").click(function () {
+                $(".square").fadeTo("slow", 0.15);
+                $(".square").fadeTo("slow", 1);
+            });
+            $("#fadeToggle").click(function () {
+                $(".square").fadeToggle();
+            });
+            $("#slideUp").click(function () {
+                $(".square").slideUp();
+            });
+            $("#slideDown").click(function () {
+                $(".square").slideDown();
+            });
+            $("#slideToggle").click(function () {
+                $(".square").slideToggle();
+            });
+            $("#animate1").click(function () {
+                $(".square").animate({
+                    height: '+=50px',
+                    width: '+=50px'
+                });
+            });
+
+            $("#animate2").click(function () {
+                $(".square").animate({
+                    height: '-=50px',
+                    width: '-=50px'
+                });
+            });
+            $("#animateStop").click(function () {
+                $(".square").stop()
+            });
+            $("#jqueryList").click(function () {
+                $(".square").css("background-color", "red").slideUp(1000).slideDown(1000, function () {
+                    $(".square").css("background-color", "black")
+                });
+            });
+
+
+        });
+    </script>
+    <link rel="stylesheet" href="contentStyle.css">
+</head>
+<body>
+<div class="total">
+    <div class="square"></div>
+    <div class="content">
+        <button id="hide">隐藏</button>
+        <button id="show">显示</button>
+        <button id="toggle">显示切换</button>
+        <button id="fadeIn">淡入</button>
+        <button id="fadeOut">淡出</button>
+        <button id="fadeTo">渐变指定</button>
+        <button id="fadeToggle">渐变切换</button>
+        <button id="slideUp">上滑</button>
+        <button id="slideDown">下滑</button>
+        <button id="slideToggle">滑动切换</button>
+        <button id="animate1">动画一</button>
+        <button id="animate2">动画二</button>
+        <button id="animateStop">停止动画</button>
+        <button id="jqueryList">jquery链</button>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>html操作</title>
+    <script src="jquery-1.11.2.js"></script>
+    <script>
+        $(function () {
+            $("#text").click(function () {
+                alert($(".square").text());
+            });
+            $("#html").click(function () {
+                alert($(".square").html());
+            });
+            $("#val").click(function () {
+                alert($("#test").val());
+            });
+            $("#attr").click(function () {
+                alert($("#test").attr("value"));//只能获取属性,不能获取样式
+            });
+            $("#setTest").click(function () {
+                $(".square").text("呵呵呵");
+            });
+            $("#setHtml").click(function () {
+                $(".square").html("Hello <b>world!</b>");
+                //回调函数可以获取旧的值,i是列表中当前元素的下表,text和val也有
+//                $(".square").html(function(i,origText){
+//                    return "旧 html: " + origText + " 新 html: Hello <b>world!</b> (index: " + i + ")";
+//                });
+            });
+            $("#setVal").click(function () {
+                $("#test").val("呵呵呵呵呵呵");
+            });
+            $("#setAttr").click(function () {
+                $(".square").attr("style", "width:200px;height:200px");
+            });
+            $("#append").click(function () {
+                $(".square").append("嘎嘎嘎");
+            });
+            $("#prepend").click(function () {
+                $(".square").prepend("我哦我");
+            });
+            $("#after").click(function () {
+                $(".square").after("<div>哈哈哈哈</div>");
+            });
+
+            $("#before").click(function () {
+                $(".square").before("<div>呵呵好</div>");
+            });
+            $("#remove").click(function () {
+                $(".square").remove();
+//                $("div").remove(".square");//删除class=square 的所有div元素
+            });
+            $("#empty").click(function () {
+                $(".square").empty();
+
+            });
+            $("#addClass").click(function () {
+                $(".square,#test").addClass("common");
+
+            });
+            $("#removeClass").click(function () {
+                $(".square,#test").removeClass("common");
+
+            });
+            $("#toggleClass").click(function () {
+                $(".square,#test").toggleClass("common");
+
+            });
+            $("#css").click(function () {
+                $(".square").css({"background-color": "red", "width": "200px", "height": "200px"});
+
+            });
+            $("#size").click(function () {
+                var square = $(".square");
+                alert("小方块 宽度为:" + square.width() + "\n" +
+                        "宽度,包含内边距为:" + square.innerWidth() + "\n"
+                        + "宽度,包含内边距和边框为:" + square.outerWidth());
+
+            });
+
+
+        });
+    </script>
+    <link rel="stylesheet" href="contentStyle.css">
+</head>
+<body>
+<div class="total">
+    <div>
+        <div class="square">
+            <div class="wrap">我是一个小方块</div>
+        </div>
+        <div class="input">
+            <p>名称: <input type="text" id="test" value="菜鸟教程"></p>
+        </div>
+    </div>
+    <div class="content">
+        <button id="text">获取text</button>
+        <button id="html">获取html</button>
+        <button id="val">获取val</button>
+        <button id="attr">获取属性attr</button>
+        <button id="setTest">设置text</button>
+        <button id="setHtml">设置html</button>
+        <button id="setVal">设置val</button>
+        <button id="setAttr">设置attr</button>
+        <button id="append">append</button>
+        <button id="prepend">prepend</button>
+        <button id="after">after</button>
+        <button id="before">before</button>
+        <button id="remove">remove</button>
+        <button id="empty">empty</button>
+        <button id="addClass">addClass</button>
+        <button id="removeClass">removeClass</button>
+        <button id="toggleClass">toggleClass</button>
+        <button id="css">css</button>
+        <button id="size">尺寸</button>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>遍历</title>
+    <script src="jquery-1.11.2.js"></script>
+    <script>
+        $(function () {
+            $("#parent").click(function () {
+                $(".square").parent().css("background-color","red");//返回直接父元素
+            });
+            $("#parents").click(function () {
+                $(".square").parents().css("background-color","blue");//返回所有祖先元素
+            });
+            $("#parentsUntil").click(function () {
+                $(".wrap").parentsUntil(".total").css("background-color","green");//两个元素之间的所有祖先元素(不包括.total)
+            });
+            $("#children").click(function () {
+//                $(".content").children().css("background-color","green");//方法返回被选元素的所有直接子元素
+                $(".content").children("#parent,#parents").css("background-color","green");
+            });
+            $("#find").click(function () {
+                $(".leftContent").find("*").css("background-color","green");//返回后代元素(同样可以筛选)
+            });
+            $("#siblings").click(function () {
+                $("#parent").siblings().css("background-color","green")//返回所有同胞元素
+            });
+            $("#next").click(function () {
+                $("#parent").next().css("background-color","green")//返回下一个同胞元素
+            });
+            $("#nextAll").click(function () {
+                $("#children").nextAll().css("background-color","green")//返回被选元素的所有跟随的同胞元素
+            });
+            $("#nextUntil").click(function () {
+                $("#parents").nextUntil("#siblings").css("background-color","green");//返回介于两个给定参数之间的所有跟随的同胞元素(不包括#siblings)
+            });
+            $("#first").click(function () {
+                $(".content button").first().css("background-color","green");//返回被选元素的首个元素
+            });
+            $("#last").click(function () {
+                $(".content button").last().css("background-color","green");//返回被选元素的最后一个元素
+            });
+            $("#eq").click(function () {
+                $(".content button").eq(2).css("background-color","green");//返回被选元素中带有指定索引号的元素
+            });
+            $("#filter").click(function () {
+                $(".content button").filter("#nextUntil").css("background-color","green");//规定一个标准。不匹配这个标准的元素会被从集合中删除，匹配的元素会被返回
+            });
+            $("#not").click(function () {
+                $(".content button").not("#nextUntil,#parent,#parents").css("background-color","green");//方法返回不匹配标准的所有元素
+            });
+
+        });
+    </script>
+    <link rel="stylesheet" href="contentStyle.css">
+</head>
+<body>
+<div class="total">
+    <div class="leftContent">
+        <div class="square">
+            <div class="wrap">我是一个小方块</div>
+        </div>
+        <div class="input">
+            <p>名称: <input type="text" id="test" value="菜鸟教程"></p>
+        </div>
+    </div>
+    <div class="content">
+        <button id="parent">parent</button>
+        <button id="parents">parents</button>
+        <button id="parentsUntil">parentsUntil</button>
+        <button id="children">children</button>
+        <button id="find">find</button>
+        <button id="siblings">siblings</button>
+        <button id="next">next</button>
+        <button id="nextAll">nextAll</button>
+        <button id="nextUntil">nextUntil</button>
+        <button id="first">first</button>
+        <button id="last">last</button>
+        <button id="eq">eq</button>
+        <button id="filter">filter</button>
+        <button id="not">not</button>
+    </div>
+</div>
+</body>
+</html>

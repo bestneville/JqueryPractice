@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>事件</title>
+    <script src="jquery-1.11.2.js"></script>
+    <script>
+        $(function () {
+//            $(".square").mouseenter(function () {
+//                $(".square").css("background-color", "red");
+//                $(".content").html("鼠标放到小方块了,小方块变红")
+//            });
+//            $(".square").mouseleave(function () {
+//                $(".square").css("background-color", "black");
+//                $(".content").html("鼠标离开小方块了,小方块变黑")
+//            });
+            $(".square").mousedown(function () {
+                $(".square").css("background-color", "green");
+                $(".content").html("鼠标点击小方块了,小方块变绿")
+            });
+            $(".square").mouseup(function () {
+                $(".square").css("background-color", "blue");
+                $(".content").html("鼠标点击小方块松开了,小方块变蓝")
+            });
+            //hover第一个函数即为mouseenter,第二个即为mouseleave
+            $(".square").hover(function () {
+                $(".square").css("background-color", "red");
+                $(".content").html("鼠标放到小方块了,小方块变红")
+            }, function () {
+                $(".square").css("background-color", "black");
+                $(".content").html("鼠标离开小方块了,小方块变黑")
+            });
+
+            $("#test").focus(function () {
+                $(".content").html("输入框获取焦点了")
+            })
+            $("#test").blur(function () {
+                $(".content").html("输入框失去焦点了")
+            })
+        });
+    </script>
+    <link rel="stylesheet" href="contentStyle.css">
+</head>
+<body>
+<div class="total">
+    <div>
+        <div class="square">
+            <div class="wrap">我是一个小方块</div>
+        </div>
+        <div class="input">
+            <p>名称: <input type="text" id="test" value="菜鸟教程"></p>
+        </div>
+    </div>
+    <div class="content">
+    </div>
+</div>
+</body>
+</html>

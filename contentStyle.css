@@ -1,0 +1,42 @@
+.total {
+    display: flex;
+}
+
+.square {
+    width: 100px;
+    height: 100px;
+    background-color: black;
+    margin-left: 200px;
+    margin-top: 200px;
+    color: white;
+    text-align: center;
+    display: table;
+    border: 10px solid goldenrod;
+    padding: 10px;
+}
+
+.wrap {
+    vertical-align: middle;
+    display: table-cell;
+}
+
+.content button {
+    display: block;
+    width: 100px;
+    height: 25px;
+    margin: 5px auto;
+}
+
+.content {
+    flex: 1;
+}
+
+.input {
+    margin-left: 200px;
+    margin-top: 20px;
+}
+
+.common {
+    background-color: aquamarine;
+}
+
