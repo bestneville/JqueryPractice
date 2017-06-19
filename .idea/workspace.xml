@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="12f84df9-8315-4277-96a8-3c5792c33517" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jquetyEffect.html" afterPath="$PROJECT_DIR$/jquetyEffect.html" />
     </list>
     <ignored path="jqueryPractice.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -39,8 +39,8 @@
       <file leaf-file-name="jquetyEffect.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/jquetyEffect.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="421">
-              <caret line="67" column="19" selection-start-line="67" selection-start-column="19" selection-end-line="67" selection-end-column="19" />
+            <state relative-caret-position="493">
+              <caret line="71" column="37" selection-start-line="71" selection-start-column="37" selection-end-line="71" selection-end-column="37" />
               <folding />
             </state>
           </provider>
@@ -248,12 +248,20 @@
       <workItem from="1497597937220" duration="15000" />
       <workItem from="1497597972981" duration="3983000" />
       <workItem from="1497607064772" duration="10372000" />
-      <workItem from="1497859886694" duration="6000" />
+      <workItem from="1497859886694" duration="64000" />
     </task>
+    <task id="LOCAL-00001" summary="jquery事件">
+      <created>1497859933475</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1497859933475</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14376000" />
+    <option name="totallyTimeSpent" value="14434000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1920" y="-100" width="1920" height="1057" extended-state="6" />
@@ -287,6 +295,10 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="jquery事件" />
+    <option name="LAST_COMMIT_MESSAGE" value="jquery事件" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -383,8 +395,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/jquetyEffect.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="421">
-          <caret line="67" column="19" selection-start-line="67" selection-start-column="19" selection-end-line="67" selection-end-column="19" />
+        <state relative-caret-position="493">
+          <caret line="71" column="37" selection-start-line="71" selection-start-column="37" selection-end-line="71" selection-end-column="37" />
           <folding />
         </state>
       </provider>
